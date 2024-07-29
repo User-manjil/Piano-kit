@@ -1,0 +1,168 @@
+/* Google font for Poppins  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E3F2FD;
+
+}
+.container{
+    padding: 35px 40px;
+    border-radius: 20px;
+    background: #141414;
+   
+}
+.container header{
+    display: flex;
+    color: #B2B2B2;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2 {
+    font-size: 1.6rem;
+}
+
+header .column {
+    display: flex;
+    align-items: center;
+}
+
+header span {
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem;
+ }
+
+
+ header input {
+    outline: none;
+    border-radius: 30px;
+  }
+  .volume input {
+    accent-color: #fff;
+  }
+  .show-keys input {
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    background: #4B4B4B
+  }
+  .show-keys input::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #8c8c8c;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+  .show-keys input:checked::before {
+    left: 35px;
+    background: #fff;
+  }
+  .GroupKeys {
+    display: flex;
+    list-style: none;
+    margin-top: 40px;
+  }
+  .GroupKeys .key {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .GroupKeys .black {
+    z-index: 2;
+    width: 44px;
+    height: 140px;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333, #000);
+  }
+  .GroupKeys .black.active {
+    box-shadow: inset -5px -10px 10px rgba(255,255,255,0.1);
+    background:linear-gradient(to bottom, #000, #434343);
+  }
+  .GroupKeys .white {
+    height: 230px;
+    width: 70px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: linear-gradient(#fff 96%, #eee 4%);
+  }
+  .GroupKeys .white.active {
+    box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+    background:linear-gradient(to bottom, #fff 0%, #eee 100%);
+  }
+  .GroupKeys .key span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    color: #A2A2A2;
+    font-size: 1.13rem;
+    text-align: center;
+  }
+  .GroupKeys .key.hide span {
+    display: none;
+  }
+  .GroupKeys .black span {
+    bottom: 13px;
+    color: #888888;
+  }
+  @media screen and (max-width: 815px) {
+    .container {
+      padding: 25px;
+    }
+    header {
+      flex-direction: column;
+    }
+    header :where(h2, .column) {
+      margin-bottom: 13px;
+    }
+    .volume input {
+      max-width: 100px;
+    }
+    .GroupKeys {
+      margin-top: 20px;
+    }
+    .GroupKeys .key:where(:nth-child(9), :nth-child(10)) {
+      display: none;
+    }
+    .GroupKeys .black {
+      height: 100px;
+      width: 40px;
+      margin: 0 -20px 0 -20px;
+    }
+    .GroupKeys .white {
+      height: 180px;
+      width: 60px;
+    }
+  }
+  @media screen and (max-width: 615px) {
+    .GroupKeys .key:nth-child(13),
+    .GroupKeys .key:nth-child(14),
+    .GroupKeys .key:nth-child(15),
+    .GroupKeys .key:nth-child(16),
+    .GroupKeys .key :nth-child(17) {
+      display: none;
+    }
+    .GroupKeys .white {
+      width: 50px;
+    }
+  }
